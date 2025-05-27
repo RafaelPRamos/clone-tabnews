@@ -1,0 +1,23 @@
+{
+  "name": "clone-tabnews",
+  "version": "1.0.0",
+  "description": "Its a project for learning software development",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^15.3.2",
+    "prettier": "^3.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
