@@ -11,12 +11,18 @@
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watchAll",
+    "test:coverage": "jest --coverage",
+    "docker:compose:db:up": "docker compose -f infra/compose.yaml up -d",
+    "docker:compose:db:down": "docker compose -f infra/compose.yaml down",
+    "docker:compose:db:logs": "docker compose -f infra/compose.yaml logs -f",
+    "postgress:up": "psql -h localhost -U local_user -d local_db"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "next": "^13.1.6",
+    "pg": "^8.11.3",
     "prettier": "^3.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
