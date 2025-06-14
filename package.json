@@ -4,7 +4,7 @@
   "description": "Its a project for learning software development",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run docker:db:up && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -13,9 +13,10 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
-    "docker:compose:db:up": "docker compose -f infra/compose.yaml up -d",
-    "docker:compose:db:down": "docker compose -f infra/compose.yaml down",
-    "docker:compose:db:logs": "docker compose -f infra/compose.yaml logs -f",
+    "docker:db:up": "docker compose -f infra/compose.yaml up -d",
+    "docker:db:down": "docker compose -f infra/compose.yaml down",
+    "docker:db:stop": "docker compose -f infra/compose.yaml stop",
+    "docker:db:logs": "docker compose -f infra/compose.yaml logs -f",
     "postgress:up": "psql -h localhost -U local_user -d local_db"
   },
   "author": "",
